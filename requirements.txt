@@ -1,12 +1,14 @@
 streamlit
 
-# Compatible LangChain versions for langchain_together
-langchain==0.1.16
-langchain-core==0.1.33
-langchain-community==0.0.28
+# LangChain ecosystem (compatible versions)
+langchain==0.1.13
+langchain-core==0.1.30
+langchain-community==0.0.24
 langchain-text-splitters==0.0.1
 
-langchain-together
+# Together integration
+langchain-together==0.0.10
+
 PyPDF2
 faiss-cpu
 sentence-transformers
