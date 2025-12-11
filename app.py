@@ -66,7 +66,8 @@ llm = Together(
     model="mistralai/Mistral-7B-Instruct-v0.2",
     temperature=0.5,
     max_tokens=1024,
-    together_api_key="b68f2588587cb665eb94e89cff6ddafce235a0c570566909f9049fc4837d64be"
+    together_api_key=os.getenv("TOGETHER_API_KEY")
+
 )
 
 qa = ConversationalRetrievalChain.from_llm(
