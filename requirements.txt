@@ -1,12 +1,14 @@
 streamlit
-langchain
-langchain-core
-langchain-community
-langchain-text-splitters
+
+# Compatible LangChain versions for langchain_together
+langchain==0.1.16
+langchain-core==0.1.33
+langchain-community==0.0.28
+langchain-text-splitters==0.0.1
+
 langchain-together
 PyPDF2
 faiss-cpu
 sentence-transformers
 torch
 einops
-
