@@ -1,11 +1,8 @@
 streamlit
-
-# Fully compatible versions that include pydantic_v1
-langchain==0.0.331
-langchain-core==0.1.23
-langchain-community==0.0.20
-langchain-together==0.0.2.post2
-
+langchain
+langchain-core
+langchain-community
+langchain-text-splitters
 PyPDF2
 faiss-cpu
 sentence-transformers
