@@ -1,10 +1,9 @@
 streamlit
 
-# INSTALL OLD VERSIONS THAT STILL HAVE pydantic_v1
-langchain==0.0.350
-langchain_core==0.1.12
-langchain_community==0.0.21
-
+# Old versions compatible with pydantic_v1 AND langchain_together
+langchain==0.0.331
+langchain-core==0.1.16
+langchain-community==0.0.20
 langchain-together==0.0.2.post2
 
 PyPDF2
