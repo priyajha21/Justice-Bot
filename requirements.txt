@@ -1,8 +1,8 @@
 streamlit
 
-# Old versions compatible with pydantic_v1 AND langchain_together
+# Fully compatible versions that include pydantic_v1
 langchain==0.0.331
-langchain-core==0.1.16
+langchain-core==0.1.23
 langchain-community==0.0.20
 langchain-together==0.0.2.post2
 
