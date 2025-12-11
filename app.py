@@ -1,7 +1,7 @@
 from langchain_community.vectorstores import FAISS
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_core.prompts import PromptTemplate
-from langchain_together import Together
+from langchain_community.llms import Together
 import os
 from langchain.memory import ConversationBufferWindowMemory
 from langchain.chains import ConversationalRetrievalChain
@@ -66,9 +66,9 @@ llm = Together(
     model="mistralai/Mistral-7B-Instruct-v0.2",
     temperature=0.5,
     max_tokens=1024,
-    together_api_key=os.getenv("TOGETHER_API_KEY")
-
+    api_key=os.getenv("TOGETHER_API_KEY")
 )
+
 
 qa = ConversationalRetrievalChain.from_llm(
     llm=llm,
