@@ -3,7 +3,8 @@ from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_core.prompts import PromptTemplate
 from langchain_community.llms import Together
 import os
-from langchain.memory import ConversationBufferWindowMemory
+from langchain_community.chat_message_histories import ChatMessageHistory
+from langchain_core.memory import ConversationBufferWindowMemory
 from langchain.chains import ConversationalRetrievalChain
 import streamlit as st
 import time
@@ -40,7 +41,11 @@ if "messages" not in st.session_state:
     st.session_state["messages"] = []
 
 if "memory" not in st.session_state:
-    st.session_state["memory"] = ConversationBufferWindowMemory(k=2, memory_key="chat_history", return_messages=True)
+    st.session_state["memory"] = ConversationBufferWindowMemory(
+    k=2,
+    memory_key="chat_history",
+    chat_memory=ChatMessageHistory()
+)
 
 # Initialize embeddings and database retriever
 embedings = HuggingFaceEmbeddings(
